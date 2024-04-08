@@ -13,7 +13,7 @@
     <li (click)="filtrar('v')" [class.ativo]="'v' === categoriaAtiva">vestuário</li>
     <li (click)="filtrar('o')" [class.ativo]="'o' === categoriaAtiva">outros</li>
   </ul>
-  <div class="catalogos">
+  <div class="catalogos"  *ngIf="filtro; else carregando">
     <div
       class="catalogo"
       *ngFor="
@@ -30,6 +30,9 @@
         ><i class="bx bx-link-external"></i> visualizar</a
       >
     </div>
+  </div>
+    <div #carregando>
+    Carregando catálogos... Por favor, aguarde um instante.
   </div>
   <div class="pag">
     <button (click)="paginaAnterior()" [disabled]="botaoPaginaAnteriorDesabilitado()"><i class='bx bx-left-arrow-alt'></i></button>
