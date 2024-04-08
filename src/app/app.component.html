@@ -31,9 +31,9 @@
       >
     </div>
   </div>
-    <div #carregando>
-    Carregando catálogos... Por favor, aguarde um instante.
-  </div>
+    <ng-template #carregando>
+    <p>Carregando catálogos... Por favor, aguarde um instante.</p>
+  </ng-template>
   <div class="pag">
     <button (click)="paginaAnterior()" [disabled]="botaoPaginaAnteriorDesabilitado()"><i class='bx bx-left-arrow-alt'></i></button>
     <button (click)="proximaPagina()" [disabled]="botaoProximaPaginaDesabilitado()"><i class='bx bx-right-arrow-alt' ></i></button>
